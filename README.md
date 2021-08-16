@@ -10,7 +10,7 @@ Based on the question given by the user, the model first tries to fetch top 10 d
 Because the model can't have input length(question + context) greater than 512 tokens, the Wikipedia documents retrieved are broken into chunks of maximum 512 length and then sequentially fed to the model.
 
 <h3>length of each chunk</h3>
-Now, each document will have n answers where n is the number of chunks(roughly equals **ceil(l/(512 - q))**, where <i>l</i> = length of Wikipedia article, <i>q</i> = length of th question) for that particular document. 
+Now, each document will have n answers where n is the number of chunks(roughly equals <b>ceil(<i>l</i>/(512 - <i>q</i>))</b>, where <i>l</i> = length of Wikipedia article, <i>q</i> = length of th question) for that particular document. 
 
 <h3>One particular best answer from all the chunks</h3>
 Hence, to get the best answer from all the chunks, sum of maximum from <code>answer_start_scores</code> and maximum from <code>answer_end_scores</code> is calculated for each chunk and then the answer returned by the chunk with the maximum sum is considered to be most plausible.
