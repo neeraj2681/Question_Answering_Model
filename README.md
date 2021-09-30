@@ -25,4 +25,4 @@ Here, for an answer span, <code>answer_start_scores</code> and <code>answer_end_
 <h3>One specific best answer from all the chunks for a particular document</h3>
 To get the best answer from all the chunks for a specific document, sum of maximum(average can also be used as well) from <code>answer_start_scores</code> and maximum from <code>answer_end_scores</code> is calculated for each chunk and then the answer returned by the chunk with the maximum sum is considered to be most plausible.
 <h4>Scores for the given question to select the best answer from all the chunks</h4>
-<img src = "./codes_snap/scores_answers.png" title = "Scores for selecting the best chunk" alt = "Scores for selecting the best chunk">
+<img src = "./codes_snap/scores_answer.png" title = "Scores for selecting the best chunk" alt = "Scores for selecting the best chunk">
