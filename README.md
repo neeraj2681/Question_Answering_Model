@@ -1,10 +1,13 @@
 # Question_Answering_Model
 A BERT based question answering model for Wikipedia Pages 
 
-The model utilises BERT to find the span of an answer for a given question and context.
+The model utilises BERT to find the span of an answer for given question and context pairs.
 
 <h3>How the documents are retrieved</h3>
-Based on the question given by the user, the model first tries to fetch top 10 documents from the Wikipedia using Wiki library in Python. Among the 10 documents only first 2 are used to find the answer.
+Based on the question given by the user, the model first tries to fetch top 10 documents from the Wikipedia using Wiki library in Python. Among the 10 documents only first 2 are used to find the answer.<br>
+
+<h4>A sample question for which documents are retrieved</h4>
+<img src = "codes_snap/retrieval_part.jpg" alt = "retrieval of documents for a particular question">
 
 <h3>Chunking the Wikipedia articles</h3>
 Because the model can't have input length(question + context) greater than 512 tokens, the Wikipedia documents retrieved are broken into chunks of maximum 512 length and then sequentially fed to the model.
