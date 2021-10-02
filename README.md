@@ -46,7 +46,7 @@ Each Wikipedia document returns <i>n</i> number of answers where <i>n</i>i is th
 <img src = "./codes_snap/buggy_code_output.png" title = "Final model buggy output" alt = "Final model buggy output">
 
 <h3>One specific best answer from all the chunks for a particular document</h3>
-For each chunk, the <code>max_start_score</code> and <code>max_end_score</code> is calculated. Now, the sum of <code>max_start_score</code> and <code>max_end_score</code>/ is calculated and the chunk with the maximum sum is considered to offer the best possible answer.
+For each chunk, the <code>max_start_score</code> and <code>max_end_score</code> is calculated. Now, the sum of <code>max_start_score</code> and <code>max_end_score</code> is calculated and the chunk with the maximum sum is considered to offer the best possible answer.
 
 <h3>The Final Model</h3>
 The Final model which returns only 2 answers, one each from the top two documents fetched.
