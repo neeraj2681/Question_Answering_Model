@@ -21,13 +21,14 @@ We select the maximum of all the possible values in <code>answer_start_scores</c
 <img src = "./codes_snap/scores_answer.png" title = "Scores for selecting the best chunk" alt = "Scores for selecting the best chunk">
 
 <h2>Is there a way to get the answer without providing the context?</h2>
-We'll try to retrieve the wikipedia documents based on the user's qeury.
+We'll try to retrieve the wikipedia documents based on the user's query and these documents will be used as the context.
 
 <h3>How the documents are retrieved</h3>
 Based on the question given by the user, the model first tries to fetch top 10 documents from the Wikipedia using Wiki library in Python. Among the 10 documents only first 2 are used as the context to find the answer.
 
 <h4>A sample question for which documents are retrieved</h4>
-The question is same as the previous one, except the part that now no context is provided by the user.
+The question is same as the previous one, except the part that now no context is provided by the user.<br>
+<h5>The image below contains the documents retrieved by the Wiki library for a particular question</h5>
 <img src = "./codes_snap/retrieval_part.png" title = "Document retrieval for a particular question" alt = "retrieval of documents for a particular question">
 
 <h3>But the length of the wikipedia article is greater than token limit!</h3>
@@ -39,9 +40,9 @@ Each document will have <i>n</i> answers where <i>n</i> is the number of chunks(
 <h3>More than one answers returned by a single document</h3>
 Each Wikipedia document returns <i>n</i> number of answers where <i>n</i>i is the number of chunks it was divided in.
 <h4>A sample question for which a single document returns more than one answer</h4>
-<img src = "./codes_snap/output_sample.png" title = "More than one answer" alt = "More than one answer">
+<img src = "./codes_snap/output_sample.jpg" title = "More than one answer" alt = "More than one answer">
 
-<h4>The Final model returns answer as follows:</h4>
+<h4>The Final model return answers as follows:</h4>
 <img src = "./codes_snap/buggy_code_output.png" title = "Final model buggy output" alt = "Final model buggy output">
 
 <h3>One specific best answer from all the chunks for a particular document</h3>
