@@ -5,6 +5,8 @@ The model uses BERT to find the span of an answer for given question and context
 <h4>Consider a sample question below:</h4>
 <img src = "./codes_snap/q1.png" title = "Sample question" alt = "Who is the Prime Minister of India?">
 
+The question along with the context is passed as input to BERT model, which then returns two integer values denoting the starting index and ending index for the possible answer in the given context.
+
 <h3>What is answer_start_score and answer_end_scores</h3>
 Here, for an answer span, <code>answer_start_scores</code> and <code>answer_end_scores</code> contains the log likelihood of each word being the starting word and ending word for the answer span.
 <h4><code>start_scores</code> for the given question</h4>
