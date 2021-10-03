@@ -42,9 +42,9 @@ Each Wikipedia document returns <i>n</i> number of answers where <i>n</i>i is th
 <h4>A sample question for which a single document returns more than one answer</h4>
 <img src = "./codes_snap/output_sample.jpg" title = "More than one answer" alt = "More than one answer">
 
-<h4>The Final model return answers as follows:</h4>
+<h4>The model return answers as follows:</h4>
 <img src = "./codes_snap/buggy_code_output.png" title = "Final model buggy output" alt = "Final model buggy output">
-
+The model seems to be a bit messy!
 <h3>One specific best answer from all the chunks for a particular document</h3>
 For each chunk, the <code>max_start_score</code> and <code>max_end_score</code> is calculated. Now, the sum of <code>max_start_score</code> and <code>max_end_score</code> is calculated and the chunk with the maximum sum is considered to offer the best possible answer.
 
